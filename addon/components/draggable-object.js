@@ -66,8 +66,7 @@ export default Ember.Component.extend({
        id = this.get('coordinator').setObject(obj, { source: this });
     }
 
-
-    dataTransfer.setData('Text', id);
+    dataTransfer.setData("text/plain", id);
 
     if (obj && typeof obj === 'object') {
       Ember.set(obj, 'isDraggingObject', true);

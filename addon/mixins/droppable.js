@@ -34,7 +34,7 @@ var Droppable = Ember.Mixin.create({
 
   'self-drop': false,
 
- /**
+  /**
    * Validates drag events. Override this to restrict which data types your
    * component accepts.
    *
@@ -107,7 +107,8 @@ var Droppable = Ember.Mixin.create({
       return;
     }
     this.acceptDrop(event);
-    this._resetDroppability();
+    // TODO: Changed
+    this.set('dragCoordinator.isOver', false);
     // TODO: might not need this? I can't remember why its here
     event.stopPropagation();
     return false;
