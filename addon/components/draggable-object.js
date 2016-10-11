@@ -68,6 +68,10 @@ export default Ember.Component.extend({
 
     dataTransfer.setData("text/plain", id);
 
+    var img = document.createElement('img');
+    img.src = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+    dataTransfer.setDragImage(img, 0, 0);
+
     if (obj && typeof obj === 'object') {
       Ember.set(obj, 'isDraggingObject', true);
     }

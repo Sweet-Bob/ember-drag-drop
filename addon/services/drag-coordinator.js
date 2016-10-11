@@ -33,7 +33,6 @@ export default Ember.Service.extend({
       event.preventDefault();
       return;
     }
-    Ember.$(event.target).css('opacity', '0');
     this.set('currentDragObject', object);
     this.set('currentDragEvent', event);
     this.set('currentDragItem', emberObject);
@@ -41,7 +40,6 @@ export default Ember.Service.extend({
   },
 
   dragEnded(event) {
-    Ember.$(event.target).css('opacity', '0');
     this.set('currentDragObject', null);
     this.set('currentDragEvent', null);
     this.set('currentDragItem', null);
