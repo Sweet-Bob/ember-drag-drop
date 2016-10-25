@@ -63,7 +63,7 @@ export default Ember.Component.extend({
     var obj = this.get('content');
     var id = null;
     if (this.get('coordinator')) {
-       id = this.get('coordinator').setObject(obj, { source: this });
+      id = this.get('coordinator').setObject(obj, { source: this });
     }
 
     dataTransfer.setData("text/plain", id);
@@ -106,9 +106,9 @@ export default Ember.Component.extend({
   },
 
   dragOver(event) {
-   if (this.get('isSortable')) {
-     this.get('dragCoordinator').draggingOver(event, this);
-   }
+    if (this.get('isSortable')) {
+      this.get('dragCoordinator').draggingOver(event, this);
+    }
     return false;
   },
 
